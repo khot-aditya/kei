@@ -1,7 +1,5 @@
 import { createBrowserClient } from "@supabase/ssr";
 
-export const runtime = 'edge'
-
 export const createClient = () =>
     createBrowserClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
