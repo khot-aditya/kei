@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers'
 import { createClient } from './utils/supabase/server'
 
-export const runtime = 'edge';
+export const runtime = 'edge'
 
 export default async function Home() {
   const cookieStore = cookies()
