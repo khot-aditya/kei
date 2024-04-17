@@ -1,14 +1,22 @@
-self.addEventListener("install", (event) => {
-  console.log("👷", "install", event);
-  self.skipWaiting();
+const CACHE_NAME = "v1";
+
+self.addEventListener("install", () => {
+  console.log("Service worker installed");
 });
 
-self.addEventListener("activate", (event) => {
-  console.log("👷", "activate", event);
-  return self.clients.claim();
+self.addEventListener("activate", () => {
+  console.log("Service worker activated");
 });
 
 self.addEventListener("fetch", (event) => {
-  console.log("👷", "fetch", event);
-  event.respondWith(fetch(event.request));
+  event.respondWith(
+    fetch(event.request)
+      .then(async (response) => {
+        const clone = response.clone();
+        const cache = await caches.open(CACHE_NAME);
+        cache.put(event.request, clone);
+        return response;
+      })
+      .catch(() => caches.match(event.request))
+  );
 });

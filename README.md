@@ -11,3 +11,5 @@ https://supabase.com/dashboard/project/wozhrafvdfjvjsvvkuug
 npm i sharp
 
 https://authjs.dev/
+
+https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation
