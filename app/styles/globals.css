@@ -73,9 +73,16 @@
   body {
     @apply bg-background text-foreground;
   }
-  
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--border) var(--background);
+
+  /* disable scroll bars for screens below tablet */
+  @screen sm {
+    body {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
