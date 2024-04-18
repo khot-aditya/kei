@@ -73,4 +73,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) var(--background);
+  }
 }
