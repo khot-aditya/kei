@@ -36,18 +36,20 @@ const Fab = () => {
                 <CredenzaContent>
                     <CredenzaHeader>
                         <CredenzaTitle className='text-xl leading-tight'>
-                            Add Transaction
+                            New Transaction
                         </CredenzaTitle>
                         <CredenzaDescription>
                             Add a new transaction to the ledger.
                         </CredenzaDescription>
                     </CredenzaHeader>
-                    <CredenzaBody>
+                    <CredenzaBody className='px-3'>
                         <TabsDemo />
                     </CredenzaBody>
                     <CredenzaFooter>
                         <CredenzaClose asChild>
-                            <button>Close</button>
+                            <Button className='w-full rounded-full py-6'>
+                                Add Transaction
+                            </Button>
                         </CredenzaClose>
                     </CredenzaFooter>
                 </CredenzaContent>
