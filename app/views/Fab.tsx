@@ -14,10 +14,6 @@ import {
     CredenzaTrigger,
 } from "@/app/components/ui/credenza"
 
-import { Input } from "@/app/components/ui/input"
-import { Label } from "@/app/components/ui/label"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card';
-import { Textarea } from '../components/ui/textarea';
 import { TabsDemo } from './form/AddTransaction';
 
 const Fab = () => {
